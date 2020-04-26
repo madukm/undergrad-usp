@@ -14,4 +14,4 @@ ponto.o:
 		gcc -g -c ponto.c
 
 clean:
-		rm: *.o a
+		rm -rf *.o

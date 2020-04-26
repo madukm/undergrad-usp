@@ -12,7 +12,7 @@ def inversion(input_img): #transformation 1
     return 255 - input_img.astype(np.float)
 
 def contrastModulation(input_img, lowRange, highRange): #transformation 2
-    return (input_img.astype(np.float) - 0)*(highRange-lowRange)/(255-0) + lowRange #255 being the highest image intensity value, and 0 the lowest 
+    return (input_img.astype(np.float) - 0)*(highRange-lowRange)/(255-0) + lowRange #255 being the highest image intensity value, and 0 the lowest
 
 def logarithmic(input_img): #transformation 3
     return 255*(np.log2(1+input_img.astype(np.float))/np.log2(1+255)) #255 being the highest image intensity value
@@ -21,7 +21,7 @@ def gammaAdjust(input_img, w, lambd): #transformation 4
     return np.power(input_img.astype(np.float), lambd)*w
 
 def rse(input_img, output_img): #root squared error
-    error = np.subtract(input_img.astype(np.float), output_img.astype(np.float)) 
+    error = np.subtract(input_img.astype(np.float), output_img.astype(np.float))
     error = np.sum(np.square(error))
     return np.round(np.sqrt(error), 4)
 

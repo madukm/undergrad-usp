@@ -1,0 +1,18 @@
+Exercícios de Sala de Aula - 19/04
+Maria Eduarda Kawakami Moreira - 11218751
+
+Algoritmo
+
+Abre o arquivo para leitura
+Lê topo
+Enquanto topo != -1
+	Escreve RRN = topo
+	Escreve Byte Off Set = topo * sizeof(reg)
+	Vai para byte topo * sizeof(reg)
+	Desempilha topo
+	Pula 1 byte(correspondente ao *) e lê os proxímos 4 bytes.
+	Empilha o RRN.
+Fim enquanto
+Fecha o arquivo.
+	
+	

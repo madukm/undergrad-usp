@@ -30,7 +30,6 @@ boolean lista_vazia(LISTA *l){
     else return TRUE;
   }
 }
-
 LISTA *lista_criar(void){
   LISTA *lista = (LISTA *)malloc(sizeof(LISTA));
   if(lista != NULL){
