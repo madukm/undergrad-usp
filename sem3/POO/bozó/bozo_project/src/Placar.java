@@ -1,4 +1,4 @@
-import java.util.*;
+//import java.util.*;
 
 /**
  * Esta classe representa o placar de um jogo de Bozó.
@@ -22,7 +22,7 @@ public class Placar{
 	 */
 
 	public void add(int posicao, int[] dados) throws java.lang.IllegalArgumentException{
-		if(posicao < 0 || posicao > 10 || placar[posicao-1] != -1)
+		if(posicao <= 0 || posicao > 10 || placar[posicao-1] != -1)
 			throw new IllegalArgumentException("Posição ocupada.");
 		else{
 			if(posicao <= 6){
@@ -40,11 +40,11 @@ public class Placar{
 						int flag2 = 0, flag3 = 0, flag5 = 0; //As flags serão usadas para verificarmos.
 						int fullHand[] = new int[6];
 						for(int i=0; i<5; i++)
-							try{
+							//try{
 								fullHand[dados[i]-1]++;
-							}catch(ArrayIndexOutOfBoundsException e){
-								continue;
-							}
+							//}catch(ArrayIndexOutOfBoundsException e){
+							//	continue;
+							//}
 						for(int i=0; i<6; i++){
 							if(fullHand[i] == 2)
 								flag2 = 1;
@@ -65,11 +65,11 @@ public class Placar{
 						int sequencia[] = new int[6];
 						int flagSeq = 1;
 						for(int i=0; i<5; i++){
-							try{
+							//try{
 								sequencia[dados[i]-1]++;
-							}catch(ArrayIndexOutOfBoundsException e){
-								continue;
-							}
+							//}catch(ArrayIndexOutOfBoundsException e){
+							//	continue;
+							//}
 						}
 						//Para verificarmos a sequência, basta ver se nos 4 dados, os lados 2 a 5 aparecem apenas 1 vez, pois o dado restante terá que ter lado 1 ou lado 6.
 						for(int i=1;i<5;i++){
@@ -87,14 +87,14 @@ public class Placar{
 						int flag4 = 0;
 						int quadra[] = new int[6];
 						for(int i=0; i<5; i++){
-							try{
+							//try{
 								quadra[dados[i]-1]++;
-							}catch(ArrayIndexOutOfBoundsException e){
-								continue;
-							}
+							//}catch(ArrayIndexOutOfBoundsException e){
+							//	continue;
+							//}
 						}
-						for(int i=1; i<6; i++){
-							if(quadra[i] == 4)
+						for(int i=0; i<6; i++){
+							if(quadra[i] >= 4)
 								flag4 = 1;
 						}
 						if(flag4 == 1)
@@ -108,11 +108,11 @@ public class Placar{
 						int flagQuina = 0;
 						int quina[] = new int[6];
 						for(int i=0; i<5; i++){
-							try{
+							//try{
 								quina[dados[i]-1]++;
-							}catch(ArrayIndexOutOfBoundsException e){
-								continue;
-							}
+							//}catch(ArrayIndexOutOfBoundsException e){
+							//	continue;
+							//}
 						}
 						for(int i=0; i<6; i++){
 							if(quina[i] == 5)
@@ -122,6 +122,9 @@ public class Placar{
 							placar[9] = 40;
 						else
 							placar[9] = 0;
+						break;
+						
+					default:
 						break;
 				}
 			}
@@ -134,7 +137,8 @@ public class Placar{
 	public int getScore(){
 		int score = 0;
 		for(int i = 0; i<10; i++)
-			score += placar[i];
+			if(placar[i] != -1)
+				score += placar[i];
 		return score;
 	}
 	
@@ -155,18 +159,18 @@ public class Placar{
 	public String toString(){
 		return
 				" "+(placar[0] == -1 ? "(1)" : placar[0]+"  ")+"    " +
-                "|   "+(placar[6] == -1 ? "(7)" : placar[6]+" ")+"    " +
+                "|   "+(placar[6] == -1 ? "(7)" : " "+placar[6])+"    " +
                 "|   "+(placar[3] == -1 ? "(4)" : placar[3])+"    \n" +
                 " --------------------------\n" +
                 " "+(placar[1] == -1 ? "(2)" : placar[1]+"  ")+"    " +
-                "|   "+(placar[7] == -1 ? "(8)" : placar[7]+" ")+"    " +
+                "|   "+(placar[7] == -1 ? "(8)" : " "+placar[7])+"    " +
                 "|   "+(placar[4] == -1 ? "(5)" : placar[4])+"    \n" +
                 " --------------------------\n" +
                 " "+(placar[2] == -1 ? "(3)" : placar[2]+"  ")+"    " +
-                "|   "+(placar[8] == -1 ? "(9)" : placar[8]+" ")+"    " +
+                "|   "+(placar[8] == -1 ? "(9)" : " "+placar[8])+"    " +
                 "|   "+(placar[5] == -1 ? "(6)" : placar[5])+"    \n" +
                 " --------------------------\n" +
-                "        |   "+(placar[9] == -1 ? "(10)" : placar[9]+" ")+"   |\n" +
+                "        |   "+(placar[9] == -1 ? "(10)" : " "+placar[9]+" ")+"   |\n" +
                 "        +----------+ ";
     }
 }

@@ -1,4 +1,3 @@
-import java.util.*;
 import java.util.Calendar;
 
 /**
@@ -11,11 +10,19 @@ public class Random{
         private long a = 3118464;
         private long xi = 1023;
 		
+        
 		/**
 		 * Construtor que usa uma semente aleatória, adquerida usando o método Calendar.getTimeInMillis().
 		 */
 		public Random(){
 			xi = Calendar.getInstance().getTimeInMillis()%p;
+			while(true)
+				try{
+				   	Thread.sleep(100); //Usado para evitar que a mesma semente seja gerada na classe Random. 
+					break;
+				}catch(InterruptedException e){
+					Thread.currentThread().interrupt();
+				}
 		}
 		
 		/**

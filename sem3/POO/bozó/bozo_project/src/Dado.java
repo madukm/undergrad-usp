@@ -15,7 +15,8 @@ public class Dado{
 	 * Cria um dado com 6 lados (um cubo).
 	 */
 	public Dado(){
-		this.lados = 6;
+		Random r = new Random();
+		lados = 6;
 	}
 
 	/**
@@ -23,7 +24,7 @@ public class Dado{
 	 * @param n - - número de lados do dado.
 	 */
 	public Dado(int n){
-		this.lados = n;
+		lados = n;
 	}
 	/**
 	 * Não tem função real dentro da classe. Foi usada apenas para testar os métodos implementados.
@@ -46,7 +47,7 @@ public class Dado{
 	 */
 	public int rolar(){
 		Random r = new Random();
-		int x = r.getIntRand(lados-1) + 1;//queremos um numero no dado, que vai de 1 até n
+		int x = r.getIntRand(lados) + 1;//queremos um numero no dado, que vai de 1 até n
 		lancamentoAnterior = x;
 		return x;
 	}

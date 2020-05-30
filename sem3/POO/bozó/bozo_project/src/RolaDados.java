@@ -30,16 +30,8 @@ public class RolaDados{
 	 */
 	public int[] rolar(){
 		int lancamentos[] = new int[numeroDados]; 
-		for(int i=0; i<numeroDados; i++){
+		for(int i=0; i<numeroDados; i++)
 			lancamentos[i] = dados[i].rolar();
-			while(true)
-				try{
- 			   		Thread.sleep(100); //Usado para evitar que a mesma semente seja gerada na classe Random. 
-					break;
-				}catch(InterruptedException e){
-    				Thread.currentThread().interrupt();
-				}
-		}
 		return lancamentos;
 	}
 
@@ -53,16 +45,8 @@ public class RolaDados{
 	public int[] rolar(boolean[] quais){
 		int lancamentos[] = new int[numeroDados];
 		for(int i=0; i<numeroDados; i++){
-			if(quais[i] == true){
+			if(quais[i] == true)
 				lancamentos[i] = dados[i].rolar(); //Dados a serem rolados
-				while(true)
-					try{
-						Thread.sleep(100);
-						break;
-					}catch(InterruptedException e){
-						Thread.currentThread().interrupt();
-					}
-			}
 			else
 				lancamentos[i] = dados[i].getLado(); //Dados que não serão rolados apenas pegam o lado do lançamento anterior.
 		}
