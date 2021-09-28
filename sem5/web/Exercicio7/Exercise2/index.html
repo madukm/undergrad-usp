@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js Search</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="app" class="container-fluid">
+      <h1>Vue.js Search</h1>
+      
+      <div class="form-group">
+        <input type="text" class="form-control" v-model="searchQuery"
+               placeholder="Search term">
+      </div>
+      
+      <div class="result-container">
+        <h2>Results<span></span></h2>
+        <ul class="list-group" v-for="item in resultQuery">
+          <li class="list-group-item" v-bind:title="item.title"> {{item.title}}</li>
+        </ul>
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

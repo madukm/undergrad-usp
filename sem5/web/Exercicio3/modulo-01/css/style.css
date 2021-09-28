@@ -1,0 +1,100 @@
+img {margin: 40px 0 0 60px; filter: drop-shadow(10px 20px 5px rgb(110, 110, 4)) sepia(70%);}
+
+
+/* Aula 29
+* {margin: 0; padding: 0;}
+nav {width: 100vw; height: 80px; background-color: royalblue;}
+.banner {width: 100vw; height: calc(100vh - 80px); background-image: url(../img/girassol.jpeg); background-size: cover;}
+*/
+
+/* Aula 22
+body {background: url(../img/girassol.jpeg) center center/100% 100% no-repeat fixed;}
+*/
+
+/* Aula 21
+#exemplo {width: 200px; height: 200px; background-color: cadetblue; transition: all 2s linear;}
+#exemplo:hover {width: 400px; height: 400px; background-color: rosybrown;}
+*/
+
+/* Aula 20
+#exemplo {border-bottom: solid 5px green; outline: dotted 5px blue;}
+*/
+
+/* Aula 19
+#conteudo {width: 600px; height: 1200px;background-color: lightsalmon; position: relative;}
+#texto {width: 600px; background-color:lightskyblue; position: fixed; left:20px; top:0;}
+*/
+
+/* Aula 18
+#base {background-color: pink; width: 600px;height: 600px;}
+#esquerda {background-color: lightseagreen; width: 300px;height: 300px; float: left;}
+#direita {background-color:lightgoldenrodyellow; width: 300px;height: 300px; float: right;}
+*/
+
+/* Aula 16 e 17
+#cores {width: 200px; height: 200px;background: linear-gradient(to top left, green, pink);}
+*/
+
+/* Aula 13 a 15
+*{font-size: 100%;}
+
+@font-face{
+  font-family: open_sans;
+  src: url(../opensans-regular-webfont.woff);
+}
+
+p{font-family: 'Girassol', cursive; font-size: 1.1em;}
+*/
+
+/* Aula 12
+#bloco {background-color: purple; height: 150px;border-bottom-left-radius: 20px;}
+*/
+
+/* Aula 11
+#conteudo {background-color: lightcyan; width: 300px; height: 70px; overflow: auto;}
+#conteudo p{opacity: 0.8;}
+*/
+
+/* Aula 10
+*{box-sizing: border-box;}
+#conteudo {background-color: grey; width: 300px; padding: 20px; box-shadow: 10px 10px 5px lightcoral;}
+*/
+
+/* Aula 8 e 9
+p {color: red; text-align: justify; text-indent: 20px;line-height: 25px;direction: ltr; letter-spacing: 2px; word-spacing: 3px;}
+h1{text-align: left; text-decoration: underline; text-shadow: 3px 3px 4px green;}
+h2{text-align: right; text-decoration: overline;}
+h3{text-align: center; text-decoration: none;}
+*/
+
+/* Aula 7
+#exemplo {background-color: darkblue; color: #fff; width:500px; height: 200px; padding: 10px 20px 30px 40px;}
+#exemplo2 {background-color: plum; color: #fff; width:500px; margin: 10px 20px 30px 40px;}
+*/
+
+/* Aula 6
+#conteudo {min-width: 500px; min-height:100px;background-color: brown;color: #fff; padding:20px;}
+*/
+
+/* Aula 5
+.texto-principal{color:orange;text-align: center;}
+.fundo-principal{background-color: palegoldenrod;padding:20px;}
+#conteudo {background-color: lightblue;padding: 20px;color:darkblue;}
+*/
+
+/* Aula 4
+h1, h2, p{color:red;text-align: center;}
+*/
+
+/* Aula 3
+*{margin:0;padding: 0;}
+h1{color:blue;font-size: 40px;}
+p{color:green;font-size: 20px;}
+input[type="text"]{width: 200px;background-color: whitesmoke;height: 40px;border: none;}
+input[type="email"]{width: 200px;background-color: whitesmoke;height: 40px;border: none;}
+input[type="submit"]{width: 50px;background-color: red;height: 40px;border: none; cursor: pointer;color: white;}
+*/
+
+/* Aula 2
+h1 {color: green; font-size: 50px;}
+*/

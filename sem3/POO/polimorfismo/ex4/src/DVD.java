@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class DVD extends Produto{
+	private String artista;
+    private double capacidade;
+	
+	public DVD(String codigoDeBarras, String nome, float preco, int quantidade, String artista, double capacidade){
+		super(codigoDeBarras, nome, preco, quantidade);
+		this.artista = artista;
+		this.capacidade = capacidade;
+	}
+
+	public String get_artista(){
+		return artista;
+	}
+
+	public double get_capacidade(){
+		return capacidade;
+	}
+}

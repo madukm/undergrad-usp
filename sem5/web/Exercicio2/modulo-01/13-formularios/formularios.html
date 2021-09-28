@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>
+      Formulários
+    </title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form action="cadastro.php" method="POST">
+    <fieldset>
+      <legend> Informações pessoais</legend>
+      Nome: <br>
+      <input type="text" name="nome" required autofocus maxlength="5"><br>
+      Senha: <br>
+      <input type="password" name="senha"><br>
+      Email: <br>
+      <input type="email" name="email" autocomplete="off" placeholder="seuemail@email.com" required><br>
+      Imagem: <br>
+      <input type="file" name="imagem"><br><br>
+      <input type="hidden" name="id"> <br><br>
+      Data:<br>
+      <input type="date" name="data" min="2000-12-31" max="2018-05-01"><br><br>
+      Hora:<br>
+      <input type="time" name="hora"><br><br>
+      Mês e ano:<br>
+      <input type="month" name="mes-ano"><br><br>
+      Semana:<br>
+      <input type="week" name="semana"><br><br>
+      Data e hora:<br>
+      <input type="datetime-local" name="data-hora"><br><br>
+      Mensagem:<br>
+      <textarea name="mensagem" rows="10" cols="40" spellcheck="false"></textarea><br><br>
+      <button type="button"> Clique aqui </button><br><br>
+      Escolha seu veiculo <br>
+      <Select name="veiculo">
+        <optgroup label="Carros">
+          <option value="camaro">Camaro</option>
+          <option value="hilux">Hilux</option>
+        </optgroup>
+        <optgroup label="Motos">
+          <option value="zig-50" selected>Zig-50</option>
+          <option value="pop-100">Pop 100</option>
+        </optgroup>
+      </Select>
+      <br><br>
+      Escolha um curso <br>
+      <input name="cursos" list="lista-cursos">
+      <datalist id="lista-cursos">
+        <option value="HTML5">
+        <option value="CSS3">
+        <option value="PHP">
+        
+      </datalist>
+      <br><br>
+      
+      URL:<br>
+      <input type="url" name="site"><br><br>
+      Search:<br>
+      <input type="search" name="pesquisa"><br><br>
+      Telefone:<br>
+      <input type="tel" name="telefone"><br><br>
+      Time: <br>
+      <input type="radio" name="time" value="corinthias" checked> Corinthians <br>
+      <input type="radio" name="time" value="são paulo"> São Paulo <br>
+      <input type="radio" name="time" value="palmeiras"> Palmeiras <br>
+      <br>
+      Cores:<br>
+      <input type="checkbox" name="cores" value="preto" checked> Preto <br>
+      <input type="checkbox" name="cores" value="vermelho"> Vermelho <br>
+      <input type="checkbox" name="cores" value="verde"> Verde <br>
+      <br>
+      Quantidade:<br>
+      <input type="number" name="quantidade" min="0" max="2000" step="20"><br>
+      <br>
+      <input type="range" name="quantidade"><br><br>
+      Cor:<br>
+      <input type="color" name="cor">
+
+
+      <input type="submit" name="btn-enviar" value="Enviar">
+    </fieldset>
+  </body>
+</html>
